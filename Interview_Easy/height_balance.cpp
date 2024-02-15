@@ -1,15 +1,20 @@
 class Solution {
 public:
-    int getHeight(TreeNode* root) {
-        if (root == nullptr) return 0; // Base case: height of a null node is 0
-        int lH = getHeight(root->left);
-        int rH = getHeight(root->right);
-        if (lH == -1 || rH == -1 || abs(lH - rH) > 1) return -1; // Check if subtree is unbalanced
-        return 1 + max(lH, rH); // Height of the current subtree
-    }
-    
-    bool isBalanced(TreeNode* root) {
-        if (root == nullptr) return true; // An empty tree is balanced
-        return getHeight(root) != -1; // Check if the tree is balanced
+    int minDepth(TreeNode* root) {
+        // Base case: If the root is null, the depth is 0
+        if (root == nullptr) return 0;
+        
+        // If the current node is a leaf node, its depth is 1
+        if (root->left == nullptr && root->right == nullptr) return 1;
+        
+        // If the left subtree is empty, consider only the depth of the right subtree
+        if (root->left == nullptr) return 1 + minDepth(root->right);
+        
+        // If the right subtree is empty, consider only the depth of the left subtree
+        if (root->right == nullptr) return 1 + minDepth(root->left);
+        
+        // Otherwise, consider both subtrees and return the minimum depth
+        return 1 + min(minDepth(root->left), minDepth(root->right));
     }
 };
+// if you want to get the depth of the nearest left node , then use min function to get the depth of the left node vas rightnode
