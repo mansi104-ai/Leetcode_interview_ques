@@ -41,18 +41,39 @@ int lengthOfLL(Node* head){
 
 }
 
+Node* deleteHead(Node* head){
+    Node* temp = head;
+    head = head ->next;
+    free(temp);
+    return head;
+}
+
+Node* deleteTail(Node* head){
+    Node* temp = head;
+
+    while(temp ->next -> next != NULL){
+        temp = temp ->next;
+    }
+    delete(temp ->next);
+    temp->next = nullptr;
+
+    return head;
+
+}
+
 void printHead(Node* head){
     while(head!=NULL){
         cout << head->data <<" ";
         head = head->next;
     }
-
 }
 
 int main(){
 
     vector<int> arr = {1,2,4,5,6};
     Node* head = convertArrtoLL(arr);
-    int result = lengthOfLL(head);
-    cout << result <<endl;
+    head = deleteTail(head);
+
+    printHead(head);
+    return 0;
 }
