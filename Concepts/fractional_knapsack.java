@@ -33,5 +33,4 @@ class solve{
     }
     return finalvalue;
   }
-  return finalvalue;
 }
