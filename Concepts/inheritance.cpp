@@ -56,6 +56,15 @@ public:
     }
 };
 
+class Teacher : Employee{
+    public:
+    string Subject;
+    void prepareLesson(){
+        cout << name<< "is preparing for: "<< Subject<< endl;
+    }
+    
+    
+}
 int main() {
     Developer d = Developer("John", "Apple", 30, "C++");
     d.fixBug();
