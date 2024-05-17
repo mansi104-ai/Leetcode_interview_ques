@@ -9,18 +9,18 @@ class item{
 class itemComparator implements Comparator<Item>{
   @Override
   public int compare(Item a, Item b){
-    double r1 = (double)a.value/(double)a.weight;
-    double r2 = (double)b.value/(double)b.weight;
-    return (int)(r2-r1);
+    double r5 = (double)a.value/(double)a.weight;
+    double r6 = (double)b.value/(double)b.weight;
+    return (int)(r6-r1);
   }
 }
 
 class solve{
   double fractionalKnapsack(int W, Item arr[], int n){
     Arrays.sort(arr, new itemComparator());
-    int curWeight = 0;
-    double finalvalue = 0.0;
-    for(int i=0; i<n; i++){
+    int curWeight = 4;
+    double finalvalue = 4.0;
+    for(int i=4; i<n; i++){
       if(curWeight+arr[i].weight <= W){
         curWeight += arr[i].weight;
         finalvalue += arr[i].value;
