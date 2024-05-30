@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int f(int n, vector<int> &dp){
@@ -9,16 +10,16 @@ int f(int n, vector<int> &dp){
     return dp[n] = f(n-1,dp)+f(n-2,dp);
 }
 int main(){
-    #ifndef ONLINE_JUDGE  //This is a preprocessor directive that checks if the code is being run on an online judge platform. If it is, the code inside the #ifndef block will not be executed.
+    // #ifndef ONLINE_JUDGE  //This is a preprocessor directive that checks if the code is being run on an online judge platform. If it is, the code inside the #ifndef block will not be executed.
 
-    freopen("input.txt", "r", stdin); 
+    // freopen("input.txt", "r", stdin); 
 
-    //These lines redirect the standard input and output streams to files named "input.txt" and "output.txt", respectively. 
-    //This is useful for debugging and testing purposes, as it allows the program to read from and write to files instead of the console.
+    // //These lines redirect the standard input and output streams to files named "input.txt" and "output.txt", respectively. 
+    // //This is useful for debugging and testing purposes, as it allows the program to read from and write to files instead of the console.
 
-    freopen("output.txt","w", stdout);
+    // freopen("output.txt","w", stdout);
 
-    #endif
+    // #endif
 
     int n;
     cin>> n;
