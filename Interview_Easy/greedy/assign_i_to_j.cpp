@@ -24,11 +24,11 @@ class Solution{
 };
 
 int main(){
-    Solution s;
+    Solution m;
 
     vector<int> g = {2,4,5};
     vector<int> s = {1,2,3,4,5};
-    s.findContentChildren(g,s);
+    m.findContentChildren(g,s);
 
     
 }
