@@ -34,7 +34,7 @@ void subArraySum(int arr[], int n, int sum)
                  << endl;
             return;
         }
-
+        // Adding the curr_sum with index value in hashmap
         map[curr_sum] = i;
     }
 
