@@ -1,32 +1,29 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
 using namespace std;
 
-int main(){
-    int n ,i,j;
-    // unordered_map<int,int> mp;
-    std::cin >> n;
-    vector<int> arr(n,0);
-    vector<int> arr2(n,0);
-    for (int k = 0;k<n;k++){
-        std::cin >>i>>j;
-        arr[k]=i;
-        arr2[k]=j;
+int main() {
+    int n;
+    cin >> n;
+    
+    // Create a vector to store n pairs
+    vector<vector<int>> arr(n, vector<int>(2));
+    
+    // Step 1: Input n pairs of i and j
+    for (int a = 0; a < n; a++) {
+        cin >> arr[a][0] >> arr[a][1];
     }
+    
+    // Step 2: Check the number of matching elements
     int cnt = 0;
-    for(int a =0;a<arr.size();a++){
-        for(int b=1;b<n;b++){
-            if(arr[a] == arr2[b] ){
-                cnt++; 
-            }else{
-                continue;
+    for (int a = 0; a < n; a++) {
+        for (int b = 0; b < n; b++) {
+            if (a != b && arr[a][0] == arr[b][1]) {
+                cnt++;
             }
-            b++;
         }
-        
     }
-    std::cout << cnt << std::endl;
-
-
+    
+    cout << cnt << endl;
+    return 0;
 }
