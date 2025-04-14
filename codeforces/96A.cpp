@@ -13,7 +13,7 @@ int main(){
             max_val = max(curr_val,max_val);
             // cout <<max_val<<endl;
         }else{
-            curr_val = 1;
+            curr_val =  1;
         }
     }
     if(max_val > 6){
