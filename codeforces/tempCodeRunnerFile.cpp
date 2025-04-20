@@ -1,1 +1,1 @@
-cout<< "YES"<<"\n";
+cout << num2[i];
