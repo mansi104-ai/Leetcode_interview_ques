@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <string>
 using namespace std;
 int main(){
 
@@ -16,20 +17,30 @@ int main(){
     vector<int> inp;
 
     for(int i =0;i<s.length();i++){
+        s[i] = toupper(s[i]);
         inp.push_back(s[i] - 'A' + 1);
     }
+
     sort(inp.begin(),inp.end());
+    // for(auto& x: inp){
+    //     cout << x <<endl;
+    // }
+    // cout << inp.size();
+    // sort(inp.begin(),inp.end());
+    
+    auto last = unique(inp.begin(), inp.end());
+    inp.erase(last, inp.end());
+    // for(auto& x: inp){
+    //     cout << x <<endl;
+    // }
 
-    for(int i = 1;i<=26;i++){
-        if(inp[i] == inp[i-1]){
-            continue;
-        }
-        if(inp[i] < i){
-            cout << "NO";
-            return 0;
-        }
+    // cout << inp.size();
+
+    // cout << inp.size();
+    if(inp.size()!= 26){
+        cout << "NO";
+        return 0;
     }
-
     cout << "YES";
     return 0;
 }

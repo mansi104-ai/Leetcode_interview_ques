@@ -1,1 +1,2 @@
-cout << num2[i];
+ // sort(inp.begin(),inp.end());
+    
