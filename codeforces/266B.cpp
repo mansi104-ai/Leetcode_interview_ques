@@ -9,7 +9,7 @@ int main() {
     cin >> n >> t;
     cin >> s;
 
-    while (t--) {
+    while (t--) { // This is equivalent to writing while(t >0)
         for (int i = 0; i < n - 1; i++) {
             if (s[i] == 'B' && s[i + 1] == 'G') {
                 swap(s[i], s[i + 1]);
@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    cout << s;
+    cout <<s;
     return 0;
 }
 
