@@ -47,6 +47,7 @@ int main(){
                 i++;
                 break;
             }
+            
             else if(inp[i] >= 1){
                 inp[i]--;
                 winner = player;
