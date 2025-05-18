@@ -27,7 +27,11 @@ int main(){
             cout << "NO" << endl;
             continue;
         }
-
+        if(n == 3 && inp!= "010" && inp!= "011" && inp!= "101" && inp!= "110"){
+            cout << "YES"<<endl;
+            continue;
+            
+        }
         bool ans = false;
         for(int j = 0; j <= n - 3; j++){
             string sub = inp.substr(j, 3);
