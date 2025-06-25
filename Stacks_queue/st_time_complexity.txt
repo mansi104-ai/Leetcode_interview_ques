@@ -1,0 +1,17 @@
+Operation  -------------   Time Complexity
+
+Insert an element          O(1)
+Delete an element          O(1)
+Access the top element     O(1)
+Traverse the stack         O(n)
+
+
+Functions in stack
+1. push()  -> Push an element at the top of the stack
+2. push_range() -> Not a direct method , but can make your own method
+3. top() -> Access the top element of the stack
+4. pop() -> Remove the topmost element of the stack
+5. emplace() -> Add the constructs element in the top of the stack
+6. size() -> Returns the number of elements in the stack
+7. empty() -> Check if the stack is empty
+8. swap() -> Swap two stacks
