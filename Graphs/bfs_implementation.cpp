@@ -9,14 +9,10 @@ public:
         // int n = adj.size();
 
         vector<int> vis(V,0);
-
-        queue<int> q;
         vis[0] = 1;
-
+        queue<int> q;
         q.push(0);
-
         vector<int> bfs;
-
         while(!q.empty()){
             int node = q.front();
             q.pop();
@@ -24,12 +20,12 @@ public:
 
             for(auto it: adj[node]){
                 if(!vis[it]){
+                    vis[it] = 1;
                     q.push(it);
-                    vis[it] =1;
                 }
             }
-
         }
+
         return bfs;
 
     }
